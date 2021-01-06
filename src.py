@@ -46,7 +46,7 @@ class MyStreamListener(tweepy.StreamListener):
     
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)   
-myStream.filter(follow=['1346169569308794882' , '44196397'])             
+myStream.filter(follow=['44196397'])             
 
 
 
