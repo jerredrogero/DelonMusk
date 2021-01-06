@@ -31,9 +31,9 @@ class MyStreamListener(tweepy.StreamListener):
 
     def on_status(self, status):
         if from_creator(status):
-            tweet = status.text
+            tweet = status.text.lower()
             if "doge" in tweet:
-                print(r.order_buy_crypto_by_price('DOGE' , 20))
+                print (r.order_buy_crypto_by_price('DOGE' , 20))
             return True
         return True
 
@@ -46,7 +46,7 @@ class MyStreamListener(tweepy.StreamListener):
     
 myStreamListener = MyStreamListener()
 myStream = tweepy.Stream(auth = api.auth, listener=myStreamListener)   
-myStream.filter(follow=['44196397'])             
+myStream.filter(follow=['1346169569308794882' , '44196397'])             
 
 
 
